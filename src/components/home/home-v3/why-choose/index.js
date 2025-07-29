@@ -11,11 +11,11 @@ const WhyChoose = () => {
             width={591}
             height={685}
             priority
-            className="w-100 h-100 cover"
-            src="/images/about/why-chose-1.webp"
+            className="w-100 h-100 contain"
+            src="/images/about/why-chose-1.jpg"
             alt="why chosse"
           />
-          <Link href="/single-v1/5">
+          {/* <Link href="/single-v1/5">
             <div className="iconbox-style5 d-flex align-items-center">
               <span className="icon flaticon-home flex-shrink-0" />
               <div className="iconbox-content flex-shrink-1 ms-2">
@@ -23,7 +23,7 @@ const WhyChoose = () => {
                 <h4 className="title mb-0">4,382 Unit</h4>
               </div>
             </div>
-          </Link>
+          </Link> */}
         </div>
       </div>
       {/* End .col-6 */}
@@ -36,9 +36,8 @@ const WhyChoose = () => {
         <div className="main-title2">
           <h2 className="title">Why Choose Us</h2>
           <p className="paragraph fz15">
-            As the complexity of buildings to increase, the{" "}
-            <br className="d-none d-lg-block" />
-            field of architecture.
+          We combine cutting-edge data insights with deep market reach to guide you every step of the property journey made clearer and smarter.
+            
           </p>
         </div>
         {/* End main-title2 */}

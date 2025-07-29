@@ -25,14 +25,14 @@ const MainMenu = () => {
         setTopMenu("pages");
       }
     });
-    propertyItems.forEach((item) =>
-      item.subMenuItems.forEach((elm) => {
-        if (elm.href.split("/")[1] == pathname.split("/")[1]) {
-          setTopMenu("property");
-          setSubmenu(item.label);
-        }
-      })
-    );
+    // propertyItems.forEach((item) =>
+    //   item.subMenuItems.forEach((elm) => {
+    //     if (elm.href.split("/")[1] == pathname.split("/")[1]) {
+    //       setTopMenu("property");
+    //       setSubmenu(item.label);
+    //     }
+    //   })
+    // );
   }, [pathname]);
 
   const handleActive = (link) => {
@@ -56,7 +56,7 @@ const MainMenu = () => {
       </li>
       {/* End Builders nav item */}
 
-      <li className="visible_list dropitem">
+      {/* <li className="visible_list dropitem">
         <a className="list-item" href="#">
           <span
             className={topMenu == "property" ? "title menuActive" : "title"}
@@ -93,7 +93,7 @@ const MainMenu = () => {
             </li>
           ))}
         </ul>
-      </li>
+      </li> */}
 
       <li className="visible_list">
         <Link className="list-item" href="/about">

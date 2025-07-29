@@ -33,7 +33,7 @@ const PropertiesByCities = () => {
           },
         }}
       >
-        {cities.slice(14, 23).map((city) => (
+        {cities.slice(0, 9).map((city) => (
           <SwiperSlide key={city.id}>
             <div className="item">
               <div className="feature-style3 text-center">
@@ -41,7 +41,7 @@ const PropertiesByCities = () => {
                   <Image
                     width={176}
                     height={176}
-                    className="w-100 h-100 cover"
+                    className="w-100 cover"
                     src={city.image}
                     alt="cities"
                   />
@@ -52,7 +52,7 @@ const PropertiesByCities = () => {
                       <Link href="/map-v3">{city.name}</Link>
                     </h6>
                     <p className="fz15 fw400 dark-color mb-0">
-                      {city.propertyCount} Properties
+                      {city.builderCount} Builders
                     </p>
                   </div>
                 </div>

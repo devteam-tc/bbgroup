@@ -3,21 +3,21 @@ const Features = () => {
   const features = [
     {
       icon: "flaticon-security",
-      title: "Property Management",
+      title: "Verified Property Listings",
       description:
-        "Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.",
+        "Discover trusted, high-quality properties with transparent pricing and complete guidance all in one place.",
     },
     {
       icon: "flaticon-keywording",
-      title: "Mortgage Services",
+      title: "Hassle-Free Documentation",
       description:
-        "Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.",
+        "End-to-end support from verified listings to documentation, registration and post-sale help ensuring legal clarity.",
     },
     {
       icon: "flaticon-investment",
-      title: "Currency Services",
+      title: "Premium Living Spaces",
       description:
-        "Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.",
+        "Find modern, high-quality homes in prime locations. From apartments to gated communities, we guide you every step of the way.",
     },
   ];
 

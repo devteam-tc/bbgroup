@@ -59,6 +59,8 @@ const ProSidebarContent = () => {
             )}
           </SubMenu>
         ))}
+        <MenuItem component={<Link href="/about" />}>About</MenuItem>
+        <MenuItem component={<Link href="/contact" />}>Contact</MenuItem>
       </Menu>
     </Sidebar>
   );
