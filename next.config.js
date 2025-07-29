@@ -11,7 +11,7 @@ const nextConfig = {
     ],
   },
   env: {
-    NEXT_PUBLIC_NGROK_URL: "0b6fe4374277.ngrok-free.app",
+    NEXT_PUBLIC_NGROK_URL: "951150aa36fd.ngrok-free.app",
   },
 };
 

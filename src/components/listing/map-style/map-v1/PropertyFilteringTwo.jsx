@@ -183,8 +183,8 @@ export default function PropertyFilteringTwo() {
           if (priceRange.length > 0) {
             const filtered = refItems.filter(
               (elm) =>
-                Number(elm.price.split('$')[1].split(',').join('')) >= priceRange[0] &&
-                Number(elm.price.split('$')[1].split(',').join('')) <= priceRange[1],
+                parsePrice(elm.price) >= priceRange[0] &&
+                parsePrice(elm.price) <= priceRange[1],
             );
             filteredArrays = [...filteredArrays, filtered];
           }
@@ -237,29 +237,18 @@ export default function PropertyFilteringTwo() {
       if (currentSortingOption == 'Newest') {
         const sorted = [...filteredData].sort((a,b)=>a.yearBuilding - b.yearBuilding)
         setSortedFilteredData(sorted)
-       
-        
       } 
       else if (currentSortingOption.trim() == 'Price Low') {
-        const sorted = [...filteredData].sort((a,b)=>a.price.split('$')[1].split(',').join('') - b.price.split('$')[1].split(',').join(''))
+        const sorted = [...filteredData].sort((a,b)=>parsePrice(a.price) - parsePrice(b.price))
         setSortedFilteredData(sorted)
-
-        
       } 
       else if (currentSortingOption.trim() == 'Price High') {
-        const sorted = [...filteredData].sort((a,b)=>b.price.split('$')[1].split(',').join('') - a.price.split('$')[1].split(',').join(''))
+        const sorted = [...filteredData].sort((a,b)=>parsePrice(b.price) - parsePrice(a.price))
         setSortedFilteredData(sorted)
-
-        
       } 
-    
       else {
         setSortedFilteredData(filteredData)
-    
-        
       }
-
-      
     }, [filteredData,currentSortingOption,])
   return (
     <>
@@ -334,4 +323,16 @@ export default function PropertyFilteringTwo() {
       </section>
     </>
   )
+}
+
+// Utility to parse price string to number (supports $ and ₹)
+function parsePrice(price) {
+  if (!price || typeof price !== 'string') return 0;
+  // Remove currency symbols and non-numeric chars except comma and dot
+  let cleaned = price.replace(/[^0-9.,]/g, '');
+  // Remove commas
+  cleaned = cleaned.replace(/,/g, '');
+  // Parse to number
+  const num = Number(cleaned);
+  return isNaN(num) ? 0 : num;
 }

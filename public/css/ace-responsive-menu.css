@@ -427,3 +427,22 @@ a.backLink {
 	float: right;
 	margin-bottom: 10px;
 }
+
+.cta-section-padding {
+  padding: 120px 0px 0px 60px;
+}
+@media (max-width: 991px) {
+  .cta-section-padding {
+    padding: 60px 5px 0px 5px;
+  }
+}
+.cta-title-white {
+  color: #fff !important;
+}
+.cta-text-white {
+  color: #fff !important;
+}
+.cta-btn-white {
+  background: #fff !important;
+  color: #222 !important;
+}

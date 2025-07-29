@@ -331,7 +331,7 @@ header.nav-homepage-style.light-header .ace-responsive-menu a {
         cursor: pointer;
         margin-bottom: 15px;
         border: 2px solid transparent;
-        padding: 4px;
+        padding: 2px;
         -webkit-transition: 0.3s;
         -o-transition: 0.3s;
         transition: 0.3s;
@@ -339,8 +339,9 @@ header.nav-homepage-style.light-header .ace-responsive-menu a {
     }
     .swiper-slide-thumb-active {
         img {
-            border-color: #fff;
+            border: 10px solid  #F6CC17;
             opacity: 1;
+            // transform: scale(1.2);
         }
     }
     .swiper-vertical > .swiper-wrapper {
