@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const CallToActions = () => {
   return (
-    <section>
+    <section className="cta-section-padding">
       <div
       className="cta-banner bgc-thm-light mx-auto maxw1600 pt90 pt60-md pb90 pb60-md bdrs12 position-relative mx20-lg px20-md mt-5"
       data-aos="fade"
@@ -22,13 +22,13 @@ const CallToActions = () => {
         <div className="row">
           <div className="col-lg-7 col-xl-6">
             <div className="cta-style3">
-              <h2 className="cta-title" style={{ color: '#fff !important' }}>Own Your Dream Home Today</h2>
-              <p className="cta-text mb25" style={{ color: '#fff !important' }}>
+              <h2 className="cta-title cta-title-white">Own Your Dream Home Today</h2>
+              <p className="cta-text mb25 cta-text-white">
               Find verified properties in top locations with complete support from search to registration. 
               {" "}
                 <br className="d-none d-md-block" /> Start your journey with us now.
               </p>
-              <Link href="/register" className="ud-btn btn" style={{ background: '#fff !important' }}>
+              <Link href="/register" className="ud-btn btn cta-btn-white">
                 Register Now <i className="fal fa-arrow-right-long" />
               </Link>
             </div>

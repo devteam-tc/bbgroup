@@ -432,7 +432,7 @@ module.exports = [
     bed: "2",
     bath: "2",
     sqft: 1200,
-    price: "$82,000",
+    price: "₹1,10,00,000",
     forRent: true,
     tags: ["house", "office"],
     propertyType:'Houses',yearBuilding:2018,

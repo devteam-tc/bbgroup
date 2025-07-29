@@ -1,6 +1,6 @@
 "use client";
 
-import listings from "@/data/listings";
+import PropertyListing from "@/data/propertyListing";
 import React, { useState, useEffect } from "react";
 import ListingSidebar from "../../sidebar";
 import TopFilterBar from "./TopFilterBar";
@@ -134,7 +134,7 @@ export default function PropertyFiltering() {
   };
 
   useEffect(() => {
-    const refItems = listings.filter((elm) => {
+    const refItems = PropertyListing.filter((elm) => {
       if (listingStatus == "All") {
         return true;
       } else if (listingStatus == "Buy") {
