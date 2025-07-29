@@ -38,19 +38,19 @@ module.exports = [
   {
     id: 7,
     name: "Pune",
-    image: "/images/locations/Hyderabad.png", // Pune skyline (example photo) :contentReference[oaicite:8]{index=8}
+    image: "/images/locations/Pune.png", // Pune skyline (example photo) :contentReference[oaicite:8]{index=8}
     builderCount: 5,
   },
   {
     id: 8,
     name: "Ahmedabad",
-    image: "/images/locations/Hyderabad.png", // Sabarmati Ashram :contentReference[oaicite:9]{index=9}
+    image: "/images/locations/Ahmedabad.png", // Sabarmati Ashram :contentReference[oaicite:9]{index=9}
     builderCount: 4,
   },
   {
     id: 9,
     name: "Jaipur",
-    image: "/images/locations/Hyderabad.png", // Hawa Mahal :contentReference[oaicite:10]{index=10}
+    image: "/images/locations/Jaipur.png", // Hawa Mahal :contentReference[oaicite:10]{index=10}
     builderCount: 3,
   },
   {

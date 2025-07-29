@@ -5,19 +5,19 @@ const Features = () => {
       icon: "flaticon-security",
       title: "Property Management",
       description:
-        "Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.",
+        "Seamlessly manage listings, legal documentation and customer interactions with end-to-end support for property buyers, builders and vendors.",
     },
     {
       icon: "flaticon-keywording",
       title: "Mortgage Services",
       description:
-        "Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.",
+        "Get hassle-free home loan assistance through our partner banks, with expert guidance for fast approvals and transparent processing.",
     },
     {
       icon: "flaticon-investment",
       title: "Currency Services",
       description:
-        "Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.",
+        "Specialized support for NRI buyers and investors, including currency exchange guidance, regulatory clarity and secure transaction options.",
     },
   ];
 

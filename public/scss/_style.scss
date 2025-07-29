@@ -1196,7 +1196,7 @@ li {
     margin-bottom: 10px;
 }
 .listing-style1 .list-meta2 button {
-    background-color: #ef5226;
+    background-color: var(--primary-color);
     border-radius: 6px;
     color: #fff;
     text-align: center;
@@ -6641,6 +6641,7 @@ textarea:focus {
     max-width: 655px;
     width: 100%;
 }
+
 
 /* All kind Of btns Styles */
 .ud-btn {

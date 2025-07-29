@@ -8,6 +8,14 @@ import FeaturedListings from "./FeatuerdListings";
 
 import PaginationTwo from "../../PaginationTwo";
 
+// Helper to parse price string robustly
+function parsePrice(price) {
+  if (!price || typeof price !== 'string') return 0;
+  // Remove currency symbols and commas, then parse as number
+  const num = price.replace(/[^\d.]/g, '');
+  return Number(num) || 0;
+}
+
 export default function PropertyFiltering() {
   const [filteredData, setFilteredData] = useState([]);
 
@@ -189,21 +197,11 @@ export default function PropertyFiltering() {
     }
 
     if (priceRange.length > 0) {
-      const filtered = refItems.filter((elm) => {
-        if (!elm.price || typeof elm.price !== "string") return false;
-        let priceNum = 0;
-        if (elm.price.includes("$")) {
-          // Remove $ and commas
-          priceNum = Number(elm.price.replace(/\$/g, "").replace(/,/g, ""));
-        } else if (elm.price.includes("₹")) {
-          // Remove ₹ and commas
-          priceNum = Number(elm.price.replace(/₹/g, "").replace(/,/g, ""));
-        } else {
-          // Unknown format, skip
-          return false;
-        }
-        return priceNum >= priceRange[0] && priceNum <= priceRange[1];
-      });
+      const filtered = refItems.filter(
+        (elm) =>
+          parsePrice(elm.price) >= priceRange[0] &&
+          parsePrice(elm.price) <= priceRange[1]
+      );
       filteredArrays = [...filteredArrays, filtered];
     }
 
@@ -250,32 +248,18 @@ export default function PropertyFiltering() {
       );
       setSortedFilteredData(sorted);
     } else if (currentSortingOption.trim() == "Price Low") {
-      const sorted = [...filteredData].sort((a, b) => {
-        const parsePrice = (price) => {
-          if (!price || typeof price !== "string") return 0;
-          if (price.includes("$")) {
-            return Number(price.replace(/\$/g, "").replace(/,/g, ""));
-          } else if (price.includes("₹")) {
-            return Number(price.replace(/₹/g, "").replace(/,/g, ""));
-          }
-          return 0;
-        };
-        return parsePrice(a.price) - parsePrice(b.price);
-      });
+      const sorted = [...filteredData].sort(
+        (a, b) =>
+          parsePrice(a.price) -
+          parsePrice(b.price)
+      );
       setSortedFilteredData(sorted);
     } else if (currentSortingOption.trim() == "Price High") {
-      const sorted = [...filteredData].sort((a, b) => {
-        const parsePrice = (price) => {
-          if (!price || typeof price !== "string") return 0;
-          if (price.includes("$")) {
-            return Number(price.replace(/\$/g, "").replace(/,/g, ""));
-          } else if (price.includes("₹")) {
-            return Number(price.replace(/₹/g, "").replace(/,/g, ""));
-          }
-          return 0;
-        };
-        return parsePrice(b.price) - parsePrice(a.price);
-      });
+      const sorted = [...filteredData].sort(
+        (a, b) =>
+          parsePrice(b.price) -
+          parsePrice(a.price)
+      );
       setSortedFilteredData(sorted);
     } else {
       setSortedFilteredData(filteredData);

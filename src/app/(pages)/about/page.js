@@ -102,9 +102,9 @@ const About = () => {
           >
             <div className="col-lg-9">
               <div className="main-title2">
-                <h2 className="title">Our Exclusive Builders</h2>
+                <h2 className="title">Our Exclusive Locations</h2>
                 <p className="paragraph">
-                Explore top builders from India’s leading real estate cities. Discover growth, infrastructure, and lifestyle in places like Mumbai, Delhi, Bangalore, Chennai, Hyderabad, and more.
+                Explore top builders from India’s leading cities. Experience quality and modern living across places like Mumbai, Delhi, Bangalore, Chennai, Hyderabad and more.
                 </p>
               </div>
             </div>
