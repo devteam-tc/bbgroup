@@ -108,6 +108,7 @@ const About = () => {
                 </p>
               </div>
             </div>
+            
             {/* End col-lg-9 */}
 
             <div className="col-lg-3">
